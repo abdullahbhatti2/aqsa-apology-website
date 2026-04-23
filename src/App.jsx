@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { story } from "./data/story";
 import Frame from "./components/Frame";
 import Navbar from "./components/Navbar";
@@ -43,6 +44,8 @@ function App() {
       )}
 
       {showFinal && <FinalScreen onReplay={replay} />}
+
+      <Analytics />
     </div>
   );
 }
