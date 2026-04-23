@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import FloatingElements from "./components/FloatingElements";
 import Question from "./components/Question";
 import FinalScreen from "./components/FinalScreen";
-
+import { Analytics } from "@vercel/analytics/react"
 function App() {
   const [current, setCurrent] = useState(0);
   const [showQuestion, setShowQuestion] = useState(false);
@@ -43,6 +43,7 @@ function App() {
       )}
 
       {showFinal && <FinalScreen onReplay={replay} />}
+      <Analytics />
     </div>
   );
 }
